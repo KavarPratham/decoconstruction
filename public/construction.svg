@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title">
+  <title>Construction Logo</title>
+  <rect width="64" height="64" rx="8" fill="#f6a800"/>
+  <g transform="translate(8,10) scale(1.1)">
+    <path d="M20 4c-7 0-13 4-15 9h30c-2-5-8-9-15-9z" fill="#ffffff"/>
+    <path d="M5 24c0-6 11-12 19-12s19 6 19 12v3H5v-3z" fill="#ffffff"/>
+    <rect x="0" y="29" width="40" height="4" rx="2" fill="#ffffff"/>
+    <rect x="6" y="8" width="4" height="2" rx="1" fill="#f6a800"/>
+    <rect x="30" y="8" width="4" height="2" rx="1" fill="#f6a800"/>
+  </g>
+</svg>
