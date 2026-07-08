@@ -5,25 +5,25 @@ const Contact = () => {
     {
       icon: <FaPhoneAlt className="text-2xl" />,
       title: 'Phone',
-      content: '+1 (555) 123-4567',
+      content: '+91 9099904344',
       subContent: 'Mon-Sat, 8AM-6PM',
     },
     {
       icon: <FaEnvelope className="text-2xl" />,
       title: 'Email',
-      content: 'info@decoconstruction.com',
+      content: 'decoconstruction247@gmail.com',
       subContent: '24/7 Email Support',
     },
     {
       icon: <FaMapMarkerAlt className="text-2xl" />,
       title: 'Location',
-      content: 'Your City, State',
+      content: '9, Rudra Complex, Mahadev Nagar, Vastral, Ahmedabad, Gujarat 382418',
       subContent: 'Visit our office',
     },
     {
       icon: <FaClock className="text-2xl" />,
       title: 'Working Hours',
-      content: 'Mon - Sat: 8AM - 6PM',
+      content: 'Mon - Sat: 9AM - 7PM',
       subContent: 'Sunday: Closed',
     },
   ];
@@ -69,13 +69,13 @@ const Contact = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="tel:+15551234567"
+              href="tel:+919099904344"
               className="inline-block bg-slate-900 hover:bg-slate-800 text-white font-bold px-8 py-4 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
               Call Us Now
             </a>
             <a
-              href="mailto:info@decoconstruction.com"
+              href="mailto:decoconstruction247@gmail.com"
               className="inline-block bg-white hover:bg-gray-100 text-slate-900 font-bold px-8 py-4 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
               Send Email
