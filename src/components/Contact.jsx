@@ -7,24 +7,28 @@ const Contact = () => {
       title: 'Phone',
       content: '+91 9099904344',
       subContent: 'Mon-Sat, 8AM-6PM',
+      link: 'tel:+919099904344',
     },
     {
       icon: <FaEnvelope className="text-2xl" />,
       title: 'Email',
       content: 'decoconstruction247@gmail.com',
       subContent: '24/7 Email Support',
+      link: 'mailto:decoconstruction247@gmail.com',
     },
     {
       icon: <FaMapMarkerAlt className="text-2xl" />,
       title: 'Location',
       content: '9, Rudra Complex, Mahadev Nagar, Vastral, Ahmedabad, Gujarat 382418',
-      subContent: 'Visit our office',
+      subContent: 'Open in Google Maps',
+      link: 'https://maps.google.com/?q=Rudra Business Part,Mahadev Nagar Tekra, Ahmedabad, Gujarat 382418',
     },
     {
       icon: <FaClock className="text-2xl" />,
       title: 'Working Hours',
       content: 'Mon - Sat: 9AM - 7PM',
       subContent: 'Sunday: Closed',
+      link: null,
     },
   ];
 
@@ -44,19 +48,41 @@ const Contact = () => {
 
         {/* Contact Info Grid */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-          {contactInfo.map((info, index) => (
-            <div
-              key={index}
-              className="bg-slate-800 border border-slate-700 rounded-lg p-6 text-center hover:border-amber-500 transition-all duration-300 hover:-translate-y-1"
-            >
-              <div className="inline-flex items-center justify-center w-14 h-14 bg-amber-500 rounded-full text-slate-900 mb-4">
-                {info.icon}
-              </div>
-              <h3 className="text-lg font-bold text-white mb-2">{info.title}</h3>
-              <p className="text-amber-500 font-semibold mb-1">{info.content}</p>
-              <p className="text-gray-400 text-sm">{info.subContent}</p>
-            </div>
-          ))}
+          {contactInfo.map((info, index) => {
+            const CardWrapper = info.link ? 'a' : 'div';
+
+            return (
+              <CardWrapper
+                key={index}
+                href={info.link || undefined}
+                target={info.title === 'Location' ? '_blank' : undefined}
+                rel={info.title === 'Location' ? 'noopener noreferrer' : undefined}
+                className={`bg-slate-800 border border-slate-700 rounded-lg p-6 text-center
+                  transition-all duration-300 hover:border-amber-500 hover:-translate-y-1
+                  block ${
+                    info.link
+                      ? 'cursor-pointer hover:bg-slate-750'
+                      : ''
+                  }`}
+              >
+                <div className="inline-flex items-center justify-center w-14 h-14 bg-amber-500 rounded-full text-slate-900 mb-4">
+                  {info.icon}
+                </div>
+
+                <h3 className="text-lg font-bold text-white mb-2">
+                  {info.title}
+                </h3>
+
+                <p className="text-amber-500 font-semibold mb-1 break-words">
+                  {info.content}
+                </p>
+
+                <p className="text-gray-400 text-sm">
+                  {info.subContent}
+                </p>
+              </CardWrapper>
+            );
+          })}
         </div>
 
         {/* CTA Box */}
